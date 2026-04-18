@@ -1,0 +1,31 @@
+@import "tailwindcss";
+/* Hide scrollbar for Chrome, Safari and Edge */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+pre {
+  counter-reset: line;
+}
+
+code {
+  display: block;
+}
+
+code span {
+  display: block;
+  counter-increment: line;
+}
+
+code span::before {
+  content: counter(line);
+  display: inline-block;
+  width: 2rem;
+  margin-right: 1rem;
+  color: gray;
+}
